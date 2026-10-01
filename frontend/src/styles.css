@@ -15,6 +15,7 @@
   --space-3: 1rem;
   --space-4: 1.5rem;
   --space-5: 2rem;
+
   font-family: system-ui, sans-serif;
   line-height: 1.5;
 }
@@ -32,7 +33,7 @@ main,
   margin-inline: auto;
 }
 
-
+/* Header */
 .site-header {
   display: flex;
   align-items: center;
@@ -58,7 +59,6 @@ main,
 
 nav a {
   color: var(--color-primary);
-  margin-right: 1rem;
 }
 
 nav a:hover,
@@ -67,6 +67,7 @@ nav a:focus {
   font-weight: 600;
 }
 
+/* Hero */
 .hero {
   display: flex;
   flex-direction: column;
@@ -82,6 +83,7 @@ nav a:focus {
   min-width: 0;
 }
 
+/* Media */
 img,
 svg,
 video {
@@ -90,6 +92,7 @@ video {
   height: auto;
 }
 
+/* Katalog */
 .equipment-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
@@ -121,7 +124,7 @@ video {
   margin-top: auto;
 }
 
-
+/* Fieldset */
 article,
 fieldset {
   margin: 1rem 0;
@@ -129,7 +132,7 @@ fieldset {
   border: 1px solid var(--color-border);
 }
 
-
+/* Form */
 .form-grid {
   display: grid;
   gap: var(--space-4);
@@ -158,11 +161,18 @@ textarea {
   min-width: 0;
 }
 
+/* Checkbox */
+.form-consent input[type="checkbox"] {
+  width: auto;
+}
+
+/* Keterangan */
 .hint {
   margin-top: 0.25rem;
   color: #475569;
 }
 
+/* Tombol */
 .form-actions {
   display: flex;
   flex-wrap: wrap;
@@ -174,6 +184,19 @@ textarea {
   flex: 1 1 10rem;
 }
 
+button {
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+  color: white;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+/* Badge */
 .badge {
   display: inline-block;
   padding: 0.25rem 0.6rem;
@@ -184,6 +207,7 @@ textarea {
   font-size: 0.875rem;
 }
 
+/* Focus */
 input:focus,
 select:focus,
 textarea:focus,
@@ -193,16 +217,7 @@ a:focus {
   outline-offset: 2px;
 }
 
-button:hover {
-  cursor: pointer;
-  opacity: 0.9;
-}
-
-button:focus {
-  outline: 3px solid #93c5fd;
-  outline-offset: 2px;
-}
-
+/* Responsive */
 @media (min-width: 48rem) {
   .hero {
     flex-direction: row;

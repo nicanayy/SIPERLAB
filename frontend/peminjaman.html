@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="id">
   <head>
@@ -28,9 +29,7 @@
       </p>
 
       <form action="/peminjaman" method="post">
-
         <div class="form-grid">
-
           <fieldset>
             <legend>Data peminjam</legend>
 
@@ -100,11 +99,10 @@
               required
             ></textarea>
           </fieldset>
-
         </div>
 
-        <div class="form-actions">
-          <label>
+        <div class="form-consent">
+          <label for="setuju">
             <input
               id="setuju"
               name="setuju"
@@ -114,10 +112,12 @@
             >
             Saya menyetujui aturan peminjaman laboratorium.
           </label>
-
-          <button type="submit">Kirim pengajuan</button>
         </div>
 
+        <div class="form-actions">
+          <button type="reset">Bersihkan</button>
+          <button type="submit">Kirim pengajuan</button>
+        </div>
       </form>
     </main>
 

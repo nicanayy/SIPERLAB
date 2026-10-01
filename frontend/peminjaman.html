@@ -29,88 +29,95 @@
 
       <form action="/peminjaman" method="post">
 
-        <fieldset>
-          <legend>Data peminjam</legend>
+        <div class="form-grid">
 
-          <label for="nim">NIM</label>
-          <input
-            id="nim"
-            name="nim"
-            type="text"
-            inputmode="numeric"
-            pattern="[0-9]{10}"
-            maxlength="10"
-            required
-          >
+          <fieldset>
+            <legend>Data peminjam</legend>
 
-          <label for="nama">Nama lengkap</label>
-          <input
-            id="nama"
-            name="nama"
-            type="text"
-            autocomplete="name"
-            minlength="3"
-            required
-          >
-        </fieldset>
+            <label for="nim">NIM</label>
+            <input
+              id="nim"
+              name="nim"
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]{10}"
+              maxlength="10"
+              required
+            >
 
-        <fieldset>
-          <legend>Detail peminjaman</legend>
+            <label for="nama">Nama lengkap</label>
+            <input
+              id="nama"
+              name="nama"
+              type="text"
+              autocomplete="name"
+              minlength="3"
+              required
+            >
+          </fieldset>
 
-          <label for="alat">Pilih alat</label>
-          <select id="alat" name="alat" required>
-            <option value="">-- Pilih alat --</option>
-            <option value="multimeter">Multimeter Digital</option>
-            <option value="router">Router</option>
-            <option value="kamera">Kamera</option>
-          </select>
+          <fieldset>
+            <legend>Detail peminjaman</legend>
 
-          <label for="tanggal-pinjam">Tanggal pinjam</label>
-          <input
-            id="tanggal-pinjam"
-            name="tanggal_pinjam"
-            type="date"
-            required
-          >
+            <label for="alat">Pilih alat</label>
+            <select id="alat" name="alat" required>
+              <option value="">-- Pilih alat --</option>
+              <option value="multimeter">Multimeter Digital</option>
+              <option value="router">Router</option>
+              <option value="kamera">Kamera</option>
+            </select>
 
-          <label for="durasi">Durasi (hari)</label>
-          <input
-            id="durasi"
-            name="durasi"
-            type="number"
-            min="1"
-            max="7"
-            aria-describedby="durasi-hint"
-            required
-          >
+            <label for="tanggal-pinjam">Tanggal pinjam</label>
+            <input
+              id="tanggal-pinjam"
+              name="tanggal_pinjam"
+              type="date"
+              required
+            >
 
-          <p id="durasi-hint" class="hint">
-            Durasi 1 sampai 7 hari.
-          </p>
+            <label for="durasi">Durasi (hari)</label>
+            <input
+              id="durasi"
+              name="durasi"
+              type="number"
+              min="1"
+              max="7"
+              aria-describedby="durasi-hint"
+              required
+            >
 
-          <label for="keperluan">Keperluan</label>
-          <textarea
-            id="keperluan"
-            name="keperluan"
-            minlength="10"
-            maxlength="300"
-            rows="5"
-            required
-          ></textarea>
-        </fieldset>
+            <p id="durasi-hint" class="hint">
+              Durasi 1 sampai 7 hari.
+            </p>
 
-        <label>
-          <input
-            id="setuju"
-            name="setuju"
-            type="checkbox"
-            value="ya"
-            required
-          >
-          Saya menyetujui aturan peminjaman laboratorium.
-        </label>
+            <label for="keperluan">Keperluan</label>
+            <textarea
+              id="keperluan"
+              name="keperluan"
+              minlength="10"
+              maxlength="300"
+              rows="5"
+              required
+            ></textarea>
+          </fieldset>
 
-        <button type="submit">Kirim pengajuan</button>
+        </div>
+
+        <div class="form-actions">
+          <label>
+            <input
+              id="setuju"
+              name="setuju"
+              type="checkbox"
+              value="ya"
+              required
+            >
+            Saya menyetujui aturan peminjaman laboratorium.
+          </label>
+
+          <button type="submit">Kirim pengajuan</button>
+        </div>
+
       </form>
     </main>
 
